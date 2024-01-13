@@ -1,0 +1,23 @@
+{
+  "compilerOptions": {
+    "jsx": "react",
+    "strict": true,
+    "allowJs": true,
+    "target": "ESNext",
+    "module": "ESNext",
+    "skipLibCheck": true,
+    "esModuleInterop": true,
+    "noImplicitAny": true,
+    "sourceMap": true,
+    "baseUrl": ".",
+    "outDir": "dist",
+    "moduleResolution": "Node",
+    "resolveJsonModule": true,
+    "paths": {
+      "@/*": ["./src/*"],
+      "@assets/*": ["./assets/*"]
+    }
+  },
+  "include": ["./src"],
+  "exclude": ["node_modules"]
+}
