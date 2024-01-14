@@ -1,18 +1,18 @@
 {
-    "singleQuote": false,
-    "trailingComma": "all",
-    "jsxSingleQuote": false,
-    "tabWidth": 2,
-    "importOrder": [
-        "^(react/(.*)|^(react$)",
-        "^(redux/(.*)|^(redux$)",
-        "<THIRD_PARTY_MODULES>",
-        "",
-        "^@/(.*)$",
-        "",
-        "^[./]"
-    ],
-    "importOrderSeperation": true,
-    "importOrderSortSpecifiers": true,
-    "plugins": ["@ianvs/prettier-plugin-sort-imports"]
+  "singleQuote": false,
+  "trailingComma": "all",
+  "jsxSingleQuote": false,
+  "tabWidth": 2,
+  "importOrder": [
+    "^(react/(.*))|^(react$)",
+    "^(redux/(.*))|^(redux$)",
+    "<THIRD_PARTY_MODULES>",
+    "",
+    "^@/(.*)$",
+    "",
+    "^[./]"
+  ],
+  "importOrderSeperation": true,
+  "importOrderSortSpecifiers": true,
+  "plugins": ["@ianvs/prettier-plugin-sort-imports"]
 }
