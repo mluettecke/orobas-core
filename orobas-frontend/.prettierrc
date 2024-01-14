@@ -8,6 +8,8 @@
     "^(redux/(.*))|^(redux$)",
     "<THIRD_PARTY_MODULES>",
     "",
+    "orobas-utils",
+    "",
     "^@/(.*)$",
     "",
     "^[./]"

@@ -1,14 +1,19 @@
 {
   "compilerOptions": {
+    "jsx": "react",
     "outDir": "./lib/",
+    "sourceMap": true,
     "target": "ESNext",
     "module": "ESNext",
+    "noEmit": false,
     "declaration": true,
     "noImplicitAny": true,
     "noUnusedParameters": true,
     "noUnusedLocals": true,
+    "allowJs": true,
     "strict": true,
-    "moduleResolution": "node"
+    "moduleResolution": "node",
+    "allowSyntheticDefaultImports": true
   },
   "include": ["./src"],
   "exclude": ["./node_modules"]

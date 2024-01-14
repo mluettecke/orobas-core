@@ -1,4 +1,3 @@
-export function hello(){
-    console.log("Hello world!");
-}
+import "./style.css";
 
+export { Button, buttonVariants } from "./components";
