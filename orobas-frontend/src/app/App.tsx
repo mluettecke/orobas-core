@@ -1,11 +1,11 @@
 import React from "react";
 
-import { Button } from "orobas-utils";
+import UIExamples from "@/pages/ui-examples";
 
 function App() {
   return (
     <div>
-      <Button variant="secondary">Button</Button>
+      <UIExamples />
     </div>
   );
 }
