@@ -1,12 +1,16 @@
 import React from "react";
 
+import { ThemeProvider } from "orobas-utils";
+
 import UIExamples from "@/pages/ui-examples";
 
 function App() {
   return (
-    <div>
-      <UIExamples />
-    </div>
+    <ThemeProvider>
+      <div>
+        <UIExamples />
+      </div>
+    </ThemeProvider>
   );
 }
 
