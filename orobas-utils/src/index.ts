@@ -2,4 +2,5 @@ import "./style.css";
 
 require("typeface-inter");
 
-export { Button, buttonVariants } from "./components";
+export { ThemeProvider } from "./provider/ThemeProvider";
+export { useTheme } from "./hooks/useTheme";
