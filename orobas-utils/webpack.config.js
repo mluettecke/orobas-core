@@ -10,12 +10,19 @@ module.exports = {
   entry: "./src/index.ts",
   devtool: "source-map",
   resolve: {
-    extensions: [".ts", ".tsx"],
+    extensions: [".ts", ".js", ".tsx"],
+    alias: {
+      "@": path.resolve(__dirname, "src/"),
+    },
   },
   output: {
     path: path.join(__dirname, "/dist"),
     filename: "orobas-utils.js",
     libraryTarget: "umd",
+  },
+  externals: {
+    react: "react",
+    "react-dom": "react-dom",
   },
   module: {
     rules: [

@@ -3,7 +3,8 @@
   "version": "0.0.1",
   "description": "A utility library used by orobas-frontend and plugins",
   "main": "./dist/orobas-utils.js",
-  "types": "./lib/index.d.ts",
+  "module": "./dist/orobas-utils.js",
+  "types": "./dist/index.d.ts",
   "scripts": {
     "dev:build": "webpack --config webpack.config.js",
     "dev:watch": "webpack --config webpack.config.js --watch",
@@ -30,7 +31,7 @@
   },
   "devDependencies": {
     "@ianvs/prettier-plugin-sort-imports": "4.1.1",
-    "@types/react": "18.2.47",
+    "@types/react": "18.2.0",
     "@vanilla-extract/webpack-plugin": "2.3.1",
     "css-loader": "6.9.0",
     "mini-css-extract-plugin": "2.7.7",
@@ -45,5 +46,9 @@
     "webpack": "5.89.0",
     "webpack-bundle-analyzer": "^4.10.1",
     "webpack-cli": "^5.1.4"
+  },
+  "peerDependencies": {
+    "react": "18.2.0",
+    "react-dom": "18.2.0"
   }
 }
