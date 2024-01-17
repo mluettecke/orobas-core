@@ -1,4 +1,3 @@
-export { Button, buttonVariants } from "./Button";
 export {
   Select,
   SelectGroup,

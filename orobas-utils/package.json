@@ -21,11 +21,12 @@
   },
   "homepage": "https://github.com/mluettecke/orobas-core#readme",
   "dependencies": {
-    "@radix-ui/react-slot": "1.0.2",
+    "@radix-ui/react-select": "^2.0.0",
     "@vanilla-extract/css": "1.14.0",
     "@vanilla-extract/recipes": "0.5.1",
     "clsx": "2.1.0",
-    "react": "18.2.0",
+    "cmdk": "^0.2.0",
+    "react-icons": "^5.0.1",
     "tailwind-merge": "^2.2.0",
     "typeface-inter": "^3.18.1"
   },
