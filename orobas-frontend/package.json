@@ -36,6 +36,7 @@
     "webpack-dev-server": "^4.15.1"
   },
   "dependencies": {
+    "@tanstack/react-router": "^1.8.3",
     "orobas-utils": "file:../orobas-utils",
     "react": "18.2.0",
     "react-dom": "18.2.0",
