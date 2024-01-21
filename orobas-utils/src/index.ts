@@ -15,6 +15,7 @@ export {
   SelectSeparator,
   SelectTrigger,
   SelectValue,
+  Icon,
 } from "./components";
 export { ThemeProvider } from "./provider/ThemeProvider";
 export { useTheme } from "./hooks/useTheme";

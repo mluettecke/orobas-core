@@ -11,3 +11,4 @@ export {
   SelectScrollUpButton,
   SelectScrollDownButton,
 } from "./Select";
+export { Icon } from "./Icon";
