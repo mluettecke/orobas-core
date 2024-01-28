@@ -2,6 +2,7 @@ import { RootRoute, Route, Router } from "@tanstack/react-router";
 
 import App from "@/app";
 import Documentation from "@/pages/Documentation";
+import { Buttons } from "@/pages/Documentation/Buttons/Buttons";
 import Index from "@/pages/Index";
 
 const rootRoute = new RootRoute({
@@ -20,7 +21,16 @@ export const documentationRoute = new Route({
   component: Documentation,
 });
 
-const routeTree = rootRoute.addChildren([indexRoute, documentationRoute]);
+export const buttonsRoute = new Route({
+  getParentRoute: () => documentationRoute,
+  path: "button",
+  component: Buttons,
+});
+
+const routeTree = rootRoute.addChildren([
+  indexRoute,
+  documentationRoute.addChildren([buttonsRoute]),
+]);
 
 export const router = new Router({ routeTree });
 
