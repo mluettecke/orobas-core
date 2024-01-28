@@ -1,17 +1,3 @@
-export { Button, buttonVariants } from "./Button";
-export {
-  Select,
-  SelectGroup,
-  SelectValue,
-  SelectTrigger,
-  SelectContent,
-  SelectLabel,
-  SelectItem,
-  SelectSeparator,
-  SelectScrollUpButton,
-  SelectScrollDownButton,
-} from "./Select";
-export { Icon } from "./Icon";
 export {
   DropdownMenu,
   DropdownMenuTrigger,
@@ -29,4 +15,3 @@ export {
   DropdownMenuSubTrigger,
   DropdownMenuRadioGroup,
 } from "./Dropdown";
-export { Avatar, AvatarImage, AvatarFallback } from "./Avatar";

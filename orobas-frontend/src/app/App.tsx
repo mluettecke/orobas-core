@@ -1,10 +1,11 @@
 import React from "react";
+import { Outlet } from "@tanstack/react-router";
+import { TanStackRouterDevtools } from "@tanstack/router-devtools";
 
 import { ThemeProvider } from "orobas-utils";
 
 import Navbar from "@/components/Navbar";
 import { Sidebar } from "@/components/Sidebar";
-import UIExamples from "@/pages/ui-examples";
 
 function App() {
   return (
@@ -13,9 +14,12 @@ function App() {
         <Navbar />
         <div className="flex h-screen overflow-hidden">
           <Sidebar />
-          <main className="w-full pt-16"></main>
+          <main className="w-full pt-14">
+            <Outlet />
+          </main>
         </div>
       </div>
+      <TanStackRouterDevtools />
     </ThemeProvider>
   );
 }
