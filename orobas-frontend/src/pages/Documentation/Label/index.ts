@@ -1,0 +1,1 @@
+export { LabelDocumentation } from "./LabelDocumentation";

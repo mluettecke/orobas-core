@@ -1,0 +1,1 @@
+export { MenubarDocumentation } from "./MenubarDocumentation";

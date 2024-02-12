@@ -15,7 +15,7 @@ import {
   DropdownMenuTrigger,
 } from "orobas-utils";
 
-import { documentationRoute } from "@/routes";
+import { documentationRoute } from "@/pages/Documentation";
 
 type UserDropdownProps = {};
 
@@ -33,10 +33,10 @@ export function UserDropdown(props: UserDropdownProps) {
         <DropdownMenuLabel className="font-normal">
           <div className="flex flex-col space-y-1">
             <p className="text-sm font-medium leading-none">
-              {"mluettecke@posteo.net"}
+              {"user@example.com"}
             </p>
             <p className="text-xs leading-none text-muted-foreground">
-              {"mluettecke@posteo.net"}
+              {"user@example.com"}
             </p>
           </div>
         </DropdownMenuLabel>

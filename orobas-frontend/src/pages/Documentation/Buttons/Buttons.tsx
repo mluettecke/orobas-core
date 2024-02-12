@@ -5,14 +5,13 @@ import { Button } from "orobas-utils";
 import { PageTitle } from "../PageTitle";
 
 export function Buttons() {
-  console.log("Buttons");
   return (
     <>
       <PageTitle
         title="Button"
         subtitle="Displays a button or a component that looks like a button."
       />
-      <div className="grid grid-rows-6">
+      <div className="flex min-h-[350px] w-full justify-center p-10 items-center">
         <Button variant="default">Default</Button>
         <Button variant="destructive">Destructive</Button>
         <Button variant="ghost">Ghost</Button>

@@ -11,6 +11,7 @@ export function PageTitle(props: PageTitleProps) {
       <h1 className="scroll-m-20 text-4xl font-bold tracking-tight">
         {props.title}
       </h1>
+      <p className="text-lg text-muted-foreground">{props.subtitle}</p>
     </div>
   );
 }

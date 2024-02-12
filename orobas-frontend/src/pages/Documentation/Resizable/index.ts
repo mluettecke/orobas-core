@@ -1,0 +1,1 @@
+export { ResizableDocumentation } from "./ResizableDocumentation";
