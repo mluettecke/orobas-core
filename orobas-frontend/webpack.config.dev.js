@@ -4,6 +4,9 @@ module.exports = {
   module: {
     rules: require("./webpack/webpack.rules"),
   },
+  output: {
+    publicPath: "/",
+  },
   stats: "errors-warnings",
   devtool: "cheap-module-source-map",
   devServer: {
