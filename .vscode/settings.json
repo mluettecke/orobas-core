@@ -1,0 +1,6 @@
+{
+  "rust-analyzer.linkedProjects": [
+    "./orobas-backend/Cargo.toml",
+    "./plugins/hello-world-plugin/backend/Cargo.toml"
+  ]
+}

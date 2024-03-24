@@ -1,0 +1,4 @@
+[general]
+name = "Hello World Plugin"
+version = "0.0.1"
+identifier = "hello-world-plugin"
