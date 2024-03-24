@@ -13,6 +13,7 @@ axum = "0.7.4"
 clap = { version = "4.5.3", features = ["env", "derive"] }
 dotenvy = "0.15.7"
 libloading = "0.8.3"
+sea-orm = { version = "0.12.15", features = ["sqlx-postgres", "runtime-tokio-native-tls"] }
 serde = "1.0.197"
 serde_derive = "1.0.197"
 tokio = { version = "1.36.0", features = ["macros", "rt-multi-thread"] }
@@ -20,3 +21,4 @@ toml = "0.8.12"
 tower-http = { version = "0.5.2", features = ["trace"] }
 tracing = "0.1.40"
 tracing-subscriber = { version = "0.3.18", features = ["env-filter"] }
+uuid = { version = "1.8.0", features = ["v4", "fast-rng"] }

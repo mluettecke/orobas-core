@@ -1,0 +1,17 @@
+version: "3.9"
+
+services:
+  orobas-database:
+    container_name: orobas-database-dev
+    image: postgres:16-alpine
+    expose:
+      - 5432
+    ports:
+      - 5432:5432
+    env_file:
+      - .env.dev
+    healthcheck:
+      test: ["CMD-SHELL", "scripts/db-health-check-dev.sh"]
+      interval: 5s
+      timeout: 5s
+      retries: 5
