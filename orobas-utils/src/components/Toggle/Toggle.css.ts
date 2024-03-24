@@ -1,7 +1,7 @@
 import { recipe, RecipeVariants } from "@vanilla-extract/recipes";
 
 export const toggleVariants = recipe({
-  base: "inline-flex items-center justify-center rounded-md text-sm font-medium transition-colors hover:bg-muted hover:text-muted-foreground focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 data-[state=on]:bg-accent data-[state=on]:text-accent-foreground",
+  base: "inline-flex items-center justify-center rounded-md text-sm font-medium transition-colors hover:bg-background-hover hover:text-text-secondary focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 data-[state=on]:bg-background-hover data-[state=on]:text-text-primary",
   variants: {
     variant: {
       default: "bg-transparent",

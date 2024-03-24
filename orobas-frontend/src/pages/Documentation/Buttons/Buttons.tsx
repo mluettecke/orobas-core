@@ -11,7 +11,7 @@ export function Buttons() {
         title="Button"
         subtitle="Displays a button or a component that looks like a button."
       />
-      <div className="flex min-h-[350px] w-full justify-center p-10 items-center">
+      <div className="flex min-h-[350px] w-full items-center justify-center p-10">
         <Button variant="default">Default</Button>
         <Button variant="destructive">Destructive</Button>
         <Button variant="ghost">Ghost</Button>

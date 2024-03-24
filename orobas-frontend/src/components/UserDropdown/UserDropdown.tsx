@@ -23,7 +23,11 @@ export function UserDropdown(props: UserDropdownProps) {
   return (
     <DropdownMenu>
       <DropdownMenuTrigger asChild>
-        <Button variant="ghost" className="relative h-8 w-8 rounded-full">
+        <Button
+          variant="ghost"
+          className="relative h-8 w-8 rounded-full
+            hover:bg-components-navbar-hover"
+        >
           <Avatar className="h-8 w-8">
             <AvatarFallback>{"ML"}</AvatarFallback>
           </Avatar>
@@ -35,7 +39,7 @@ export function UserDropdown(props: UserDropdownProps) {
             <p className="text-sm font-medium leading-none">
               {"user@example.com"}
             </p>
-            <p className="text-xs leading-none text-muted-foreground">
+            <p className="text-muted-foreground text-xs leading-none">
               {"user@example.com"}
             </p>
           </div>

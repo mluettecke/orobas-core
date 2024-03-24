@@ -1,28 +1,44 @@
 import React from "react";
-import { Outlet, useRouterState } from "@tanstack/react-router";
+import {
+  MatchRoute,
+  Outlet,
+  RouteMatch,
+  useMatches,
+  useRouterState,
+} from "@tanstack/react-router";
 
 import { ScrollArea } from "orobas-utils";
 
+import { documentationRoute } from "@/pages/Documentation";
+import { indexRoute } from "@/routes";
+
 import { CoreSidebar } from "./CoreSidebar";
 import { DocumentationSidebar } from "./DocumentationSidebar";
-import { SidebarItem } from "./SidebarItem";
 
-function getSidebar(pathname: string) {
-  if (pathname.startsWith("/documentation")) {
-    return <DocumentationSidebar />;
+function getSidebar(matches: RouteMatch[]) {
+  if (matches.length === 1) {
+    return <CoreSidebar />;
   }
-
-  return <CoreSidebar />;
+  return (
+    <>
+      <MatchRoute to={indexRoute.to} fuzzy>
+        <CoreSidebar />
+      </MatchRoute>
+      <MatchRoute to={documentationRoute.to} fuzzy>
+        <DocumentationSidebar />
+      </MatchRoute>
+    </>
+  );
 }
 
 export function Sidebar() {
-  const { location } = useRouterState();
+  const matches = useMatches();
 
   return (
-    <nav className="relative h-screen border-r pt-14 md:block w-72">
-      <div className="space-y-4 py-2 h-[calc(100vh-3.5rem)]">
+    <nav className="h-screen w-72 border-r bg-foreground pt-14 md:block">
+      <div className="h-[calc(100vh-3.5rem)] space-y-4 py-2">
         <ScrollArea className="h-full px-3 py-2">
-          {getSidebar(location.pathname)}
+          {matches ? getSidebar(matches) : null}
         </ScrollArea>
       </div>
     </nav>

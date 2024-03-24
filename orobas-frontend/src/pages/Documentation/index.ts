@@ -41,6 +41,7 @@ import { SwitchDocumentation } from "./Switch";
 import { TableDocumentation } from "./Table";
 import { TabsDocumentation } from "./Tabs/TabsDocumentation";
 import { TextareaDocumentation } from "./Textarea";
+import { ThemeOverview } from "./Theme/Theme";
 import { ToastDocumentation } from "./Toast";
 import { ToggleDocumentation } from "./Toggle";
 import { ToggleGroupDocumentation } from "./ToggleGroup";
@@ -52,259 +53,271 @@ export const documentationRoute = new Route({
   component: Documentation,
 });
 
-export const buttonsRoute = new Route({
+export const themeOverviewRoute = new Route({
   getParentRoute: () => documentationRoute,
+  path: "/theme",
+  component: ThemeOverview,
+});
+
+export const primitivesRoute = new Route({
+  getParentRoute: () => documentationRoute,
+  path: "/primitives",
+  component: Documentation,
+});
+
+export const buttonsRoute = new Route({
+  getParentRoute: () => primitivesRoute,
   path: "button",
   component: Buttons,
 });
 
 export const alertsRoute = new Route({
-  getParentRoute: () => documentationRoute,
+  getParentRoute: () => primitivesRoute,
   path: "alert",
   component: Alerts,
 });
 
 export const alertDialogsRoute = new Route({
-  getParentRoute: () => documentationRoute,
+  getParentRoute: () => primitivesRoute,
   path: "alert-dialog",
   component: AlertDialogs,
 });
 
 export const avatarsRoute = new Route({
-  getParentRoute: () => documentationRoute,
+  getParentRoute: () => primitivesRoute,
   path: "avatar",
   component: Avatars,
 });
 
 export const accordionssRoute = new Route({
-  getParentRoute: () => documentationRoute,
+  getParentRoute: () => primitivesRoute,
   path: "accordion",
   component: Accordions,
 });
 
 export const aspectRatioRoute = new Route({
-  getParentRoute: () => documentationRoute,
+  getParentRoute: () => primitivesRoute,
   path: "aspect-ratio",
   component: AspectRatioDocumentation,
 });
 
 export const badgesRoute = new Route({
-  getParentRoute: () => documentationRoute,
+  getParentRoute: () => primitivesRoute,
   path: "badge",
   component: Badges,
 });
 
 export const calendarRoute = new Route({
-  getParentRoute: () => documentationRoute,
+  getParentRoute: () => primitivesRoute,
   path: "calendar",
   component: CalendarDocumentation,
 });
 
 export const cardRoute = new Route({
-  getParentRoute: () => documentationRoute,
+  getParentRoute: () => primitivesRoute,
   path: "card",
   component: CardDocumentation,
 });
 
 export const carouselRoute = new Route({
-  getParentRoute: () => documentationRoute,
+  getParentRoute: () => primitivesRoute,
   path: "carousel",
   component: CarouselDocumentation,
 });
 
 export const checkboxRoute = new Route({
-  getParentRoute: () => documentationRoute,
+  getParentRoute: () => primitivesRoute,
   path: "checkbox",
   component: CheckboxDocumentation,
 });
 
 export const collapsibleRoute = new Route({
-  getParentRoute: () => documentationRoute,
+  getParentRoute: () => primitivesRoute,
   path: "collapsible",
   component: CollapsibleDocumentation,
 });
 
 export const commandRoute = new Route({
-  getParentRoute: () => documentationRoute,
+  getParentRoute: () => primitivesRoute,
   path: "command",
   component: CommandDocumentation,
 });
 
 export const contextMenuRoute = new Route({
-  getParentRoute: () => documentationRoute,
+  getParentRoute: () => primitivesRoute,
   path: "context-menu",
   component: ContextMenuDocumentation,
 });
 
 export const dialogRoute = new Route({
-  getParentRoute: () => documentationRoute,
+  getParentRoute: () => primitivesRoute,
   path: "dialog",
   component: DialogDocumentation,
 });
 
 export const datePickerRoute = new Route({
-  getParentRoute: () => documentationRoute,
+  getParentRoute: () => primitivesRoute,
   path: "datepicker",
   component: DatePickerDocumentation,
 });
 
 export const dropdownRoute = new Route({
-  getParentRoute: () => documentationRoute,
+  getParentRoute: () => primitivesRoute,
   path: "dropdown",
   component: DropdownDocumentation,
 });
 
 export const hoverCardRoute = new Route({
-  getParentRoute: () => documentationRoute,
+  getParentRoute: () => primitivesRoute,
   path: "hover-card",
   component: HoverCardDocumentation,
 });
 
 export const inputRoute = new Route({
-  getParentRoute: () => documentationRoute,
+  getParentRoute: () => primitivesRoute,
   path: "input",
   component: InputDocumentation,
 });
 
 export const labelRoute = new Route({
-  getParentRoute: () => documentationRoute,
+  getParentRoute: () => primitivesRoute,
   path: "label",
   component: LabelDocumentation,
 });
 
 export const menubarRoute = new Route({
-  getParentRoute: () => documentationRoute,
+  getParentRoute: () => primitivesRoute,
   path: "menubar",
   component: MenubarDocumentation,
 });
 
 export const navigationMenuRoute = new Route({
-  getParentRoute: () => documentationRoute,
+  getParentRoute: () => primitivesRoute,
   path: "navigation-menu",
   component: NavigationMenuDocumentation,
 });
 
 export const paginationRoute = new Route({
-  getParentRoute: () => documentationRoute,
+  getParentRoute: () => primitivesRoute,
   path: "pagination",
   component: PaginationDocumentation,
 });
 
 export const popoverRoute = new Route({
-  getParentRoute: () => documentationRoute,
+  getParentRoute: () => primitivesRoute,
   path: "popover",
   component: PopoverDocumentation,
 });
 
 export const progressRoute = new Route({
-  getParentRoute: () => documentationRoute,
+  getParentRoute: () => primitivesRoute,
   path: "progress",
   component: ProgressDocumentation,
 });
 
 export const radioGroupRoute = new Route({
-  getParentRoute: () => documentationRoute,
+  getParentRoute: () => primitivesRoute,
   path: "radio-group",
   component: RadioGroupDocumentation,
 });
 
 export const resizableRoute = new Route({
-  getParentRoute: () => documentationRoute,
+  getParentRoute: () => primitivesRoute,
   path: "resizable",
   component: ResizableDocumentation,
 });
 
 export const scrollAreaRoute = new Route({
-  getParentRoute: () => documentationRoute,
+  getParentRoute: () => primitivesRoute,
   path: "scroll-area",
   component: ScrollAreaDocumentation,
 });
 
 export const selectRoute = new Route({
-  getParentRoute: () => documentationRoute,
+  getParentRoute: () => primitivesRoute,
   path: "select",
   component: SelectDocumentation,
 });
 
 export const separatorRoute = new Route({
-  getParentRoute: () => documentationRoute,
+  getParentRoute: () => primitivesRoute,
   path: "separator",
   component: SeparatorDocumentation,
 });
 
 export const sheetRoute = new Route({
-  getParentRoute: () => documentationRoute,
+  getParentRoute: () => primitivesRoute,
   path: "sheet",
   component: SheetDocumentation,
 });
 
 export const skeletonRoute = new Route({
-  getParentRoute: () => documentationRoute,
+  getParentRoute: () => primitivesRoute,
   path: "skeleton",
   component: SkeletonDocumentation,
 });
 
 export const sliderRoute = new Route({
-  getParentRoute: () => documentationRoute,
+  getParentRoute: () => primitivesRoute,
   path: "slider",
   component: SliderDocumentation,
 });
 
 export const sonnerRoute = new Route({
-  getParentRoute: () => documentationRoute,
+  getParentRoute: () => primitivesRoute,
   path: "sonner",
   component: SonnerDocumentation,
 });
 
 export const switchRoute = new Route({
-  getParentRoute: () => documentationRoute,
+  getParentRoute: () => primitivesRoute,
   path: "switch",
   component: SwitchDocumentation,
 });
 
 export const tableRoute = new Route({
-  getParentRoute: () => documentationRoute,
+  getParentRoute: () => primitivesRoute,
   path: "table",
   component: TableDocumentation,
 });
 
 export const tabsRoute = new Route({
-  getParentRoute: () => documentationRoute,
+  getParentRoute: () => primitivesRoute,
   path: "tabs",
   component: TabsDocumentation,
 });
 
 export const textareaRoute = new Route({
-  getParentRoute: () => documentationRoute,
+  getParentRoute: () => primitivesRoute,
   path: "textarea",
   component: TextareaDocumentation,
 });
 
 export const toastRoute = new Route({
-  getParentRoute: () => documentationRoute,
+  getParentRoute: () => primitivesRoute,
   path: "toast",
   component: ToastDocumentation,
 });
 
 export const toggleRoute = new Route({
-  getParentRoute: () => documentationRoute,
+  getParentRoute: () => primitivesRoute,
   path: "toggle",
   component: ToggleDocumentation,
 });
 
 export const toggleGroupRoute = new Route({
-  getParentRoute: () => documentationRoute,
+  getParentRoute: () => primitivesRoute,
   path: "toggle-group",
   component: ToggleGroupDocumentation,
 });
 
 export const tooltipRoute = new Route({
-  getParentRoute: () => documentationRoute,
+  getParentRoute: () => primitivesRoute,
   path: "tooltip",
   component: TooltipDocumentation,
 });
 
-documentationRoute.addChildren([
+primitivesRoute.addChildren([
   aspectRatioRoute,
   accordionssRoute,
   alertsRoute,
@@ -348,3 +361,5 @@ documentationRoute.addChildren([
   toggleGroupRoute,
   tooltipRoute,
 ]);
+
+documentationRoute.addChildren([themeOverviewRoute, primitivesRoute]);

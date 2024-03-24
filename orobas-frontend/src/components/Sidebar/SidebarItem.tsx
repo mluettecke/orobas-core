@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "@tanstack/react-router";
 
-import { Icon } from "orobas-utils";
+import { cn, Icon } from "orobas-utils";
 
 type SidebarItemProps = {
   icon: string;
@@ -18,11 +18,15 @@ export function SidebarItem(props: SidebarItemProps) {
       activeOptions={{
         exact: true,
       }}
-      className={
-        "group flex items-center rounded-md px-3 py-2 text-sm font-medium hover:bg-accent hover:text-accent-foreground transparent" +
-        className
-      }
-      activeProps={{ className: "bg-accent" }}
+      className={cn(
+        `transparent group flex items-center rounded-md px-3 py-2 text-sm
+        font-medium hover:bg-foreground-hover`,
+        className,
+      )}
+      activeProps={{
+        className:
+          "text-primary bg-primary-light/30 hover:!bg-primary-light/30",
+      }}
     >
       <Icon name={icon} />
       <span>{label}</span>

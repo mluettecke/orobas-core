@@ -41,6 +41,7 @@ import {
   tableRoute,
   tabsRoute,
   textareaRoute,
+  themeOverviewRoute,
   toastRoute,
   toggleGroupRoute,
   toggleRoute,
@@ -53,6 +54,11 @@ import { SidebarItemGroup } from "./SidebarItemGroup";
 export function DocumentationSidebar() {
   return (
     <ScrollArea>
+      <SidebarItem
+        label="Theme"
+        to={themeOverviewRoute.to}
+        icon="tabler:paint"
+      />
       <SidebarItemGroup label="Primitives">
         <SidebarItem
           icon="radix-icons:blending-mode"

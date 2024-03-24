@@ -3,6 +3,7 @@ import { Outlet } from "@tanstack/react-router";
 import { TanStackRouterDevtools } from "@tanstack/router-devtools";
 
 import {
+  ScrollArea,
   Sonner,
   ThemeProvider,
   Toaster,
@@ -22,12 +23,14 @@ function App() {
           <Navbar />
           <div className="flex h-screen overflow-hidden">
             <Sidebar />
-            <main className="w-full pt-14">
-              <Outlet />
-            </main>
+            <ScrollArea className="w-full">
+              <main className="w-full pt-14">
+                <Outlet />
+              </main>
+            </ScrollArea>
           </div>
         </div>
-        <TanStackRouterDevtools />
+
         <Toaster />
         <Sonner />
       </TooltipProvider>
