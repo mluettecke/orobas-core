@@ -11,6 +11,27 @@ pub struct Config {
 
     #[clap(long, env, value_parser = validate_plugin_folder)]
     pub plugins_folder: String,
+
+    #[clap(long, env)]
+    pub postgres_db: String,
+
+    #[clap(long, env)]
+    pub postgres_host: String,
+
+    #[clap(long, env)]
+    pub postgres_user: String,
+
+    #[clap(long, env)]
+    pub postgres_password: String,
+}
+
+impl Config {
+    pub fn db_url(&self) -> String {
+        return format!(
+            "postgres://{}:{}@{}:5432/{}",
+            self.postgres_user, self.postgres_password, self.postgres_host, self.postgres_db
+        );
+    }
 }
 
 #[derive(Debug)]
